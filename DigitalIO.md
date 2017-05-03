@@ -38,7 +38,7 @@ Finally, print the state of the button to the serial monitor:
 
 `Serial.println(btnState);`
 
-Your code so far should look like this: [1-1-1-read_pushbutton_input](examples/_1-1-1-read_pushbutton_input.ino)
+Your code so far should look like this: [1-1-1-read_pushbutton_input](examples/_1-1-1-read_pushbutton_input/_1-1-1-read_pushbutton_input.ino)
 
 Now compile the code and upload it to the Arduino. Open the _Serial monitor_ in the _tools_ menu. Press and release the button and look at the results in the serial monitor. A zero corresponds to a _low_ digital level (ground) and a one corresponds to a _high_ digital level (5V logic level).
 
@@ -60,7 +60,7 @@ Recompile your code and check the serial monitor again.
 
 Now the serial monitor should show a steady stream of ones when the button is released and a steady stream of zeros when the button is pressed.
 
-Code for this example: [1-1-2-read_pushbutton_input_pullup.ino]((examples/_1-1-2-read_pushbutton_input_pullup.ino)
+Code for this example: [1-1-2-read_pushbutton_input_pullup.ino](examples/_1-1-2-read_pushbutton_input_pullup/_1-1-2-read_pushbutton_input_pullup.ino)
 
 ## Turning on an LED (output)
 
@@ -117,7 +117,7 @@ Recompile the code and upload it to the Arduino.
 
 This time, the LED should behave as expected; on when the button is pressed and off when the button is released.
 
-Code for this example: [1-2-1-led.ino]((examples/_1-2-1-led.ino)
+Code for this example: [1-2-1-led.ino](examples/_1-2-1-led/_1-2-1-led.ino)
 
 ## Toggling on and off an LED
 
@@ -208,7 +208,7 @@ This will cause the program execution to pause for a short time after the first 
 
 Recompile the code and upload it to the Arduino. This time the behavior should be stable and robust.
 
-Code for this example: [1-2-2-led_toggle.ino]((examples/_1-2-2-led_toggle.ino)
+Code for this example: [1-2-2-led_toggle.ino](examples/_1-2-2-led_toggle/_1-2-2-led_toggle.ino)
 
 <hr>
 Return to the [home page](https://github.com/DrGFreeman/E2C-Arduino-Intro)
