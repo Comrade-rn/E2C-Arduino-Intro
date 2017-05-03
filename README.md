@@ -5,7 +5,7 @@ This repository presents a short introduction to Arduino.
 ## Contents
 
 1. [Digital inputs and outputs (IO)](DigitalIO.md)
-1. [Analog inputs and outputs (IO)](AnalogIO.md)
+1. Analog inputs and outputs (IO) - To be added shortly.
 
 ## Required material
 
@@ -22,7 +22,7 @@ The material required for this introduction is the following:
 
 ## Example code
 
-The code of the examples is available in the code folder.
+The code of the examples is available in the examples folder.
 
 <hr>
 
