@@ -10,6 +10,8 @@ Before starting, lets connect the Arduino 5V and ground (GND) pins to the breadb
 
 ## Reading a push-button (Input)
 
+Complete code for this example: [1-1-1-read_pushbutton_input](examples/_1-1-1-read_pushbutton_input/_1-1-1-read_pushbutton_input.ino)
+
 Lets start by installing a push-button across the middle of the breadboard as shown. Connect one leg of the push-button to the ground rail (black wire) and the other to digital pin 2 (orange wire). By default, the push-button circuit is open. When it is pressed, the push-button circuit will close, establishing a connection between digital pin 2 and ground.
 
 ![Breadboard with push-button](images/1-2-pushbutton.png)
@@ -38,9 +40,7 @@ Finally, print the state of the button to the serial monitor:
 
 `Serial.println(btnState);`
 
-Your code so far should look like this: [1-1-1-read_pushbutton_input](examples/_1-1-1-read_pushbutton_input/_1-1-1-read_pushbutton_input.ino)
-
-Now compile the code and upload it to the Arduino. Open the _Serial monitor_ in the _tools_ menu. Press and release the button and look at the results in the serial monitor. A zero corresponds to a _low_ digital level (ground) and a one corresponds to a _high_ digital level (5V logic level).
+Now compile the code and upload it to the Arduino. Open the [_Serial monitor_](https://www.arduino.cc/en/Guide/Environment#toc12) in the _tools_ menu. Press and release the button and look at the results in the serial monitor. A zero corresponds to a _low_ digital level (ground) and a one corresponds to a _high_ digital level (5V logic level).
 
 What happens?
 
@@ -49,6 +49,8 @@ When the button is pressed, the button circuit is closed and the digital pin 2 i
 When the button is released, the digital pin 2 is neither connected to ground, nor connected to a 5V source. Since we set the pin mode of digital pin 2 to _INPUT_, the state of the pin is undefined and any noise or cross-talk from other pins can make the reading high or low. Consequently, the serial monitor can show zeros or ones randomly.
 
 ## Reading a push-button with input pull-up
+
+Complete code for this example: [1-1-2-read_pushbutton_input_pullup](examples/_1-1-2-read_pushbutton_input_pullup/_1-1-2-read_pushbutton_input_pullup.ino)
 
 To remedy this undefined pin state, the microcontroller offers the option of connecting the digital pin to 5V (high) via an internal resistor. This is called a _pull-up_ resistor because it "pulls" the pin state to a high state.
 
@@ -60,9 +62,9 @@ Recompile your code and check the serial monitor again.
 
 Now the serial monitor should show a steady stream of ones when the button is released and a steady stream of zeros when the button is pressed.
 
-Code for this example: [1-1-2-read_pushbutton_input_pullup.ino](examples/_1-1-2-read_pushbutton_input_pullup/_1-1-2-read_pushbutton_input_pullup.ino)
-
 ## Turning on an LED (output)
+
+Complete code for this example: [1-2-1-led](examples/_1-2-1-led/_1-2-1-led.ino)
 
 Our next step is to turn on an LED when the button is pressed.
 
@@ -78,13 +80,13 @@ In the `setup()` section, set the LED pin mode to `OUTPUT` using the `pinMode()`
 
 `pinMode(ledPin, OUTPUT);`
 
-Now we want to turn the LED on when the button is pressed. To do so, add an `if` statement that will execute the code within the curly braces {} only if the button state is true (equal to 1):
+Now we want to turn the LED on when the button is pressed. To do so, add, in the `loop()` section, an `if` statement that will execute the code within the curly braces {} only if the button state is true (equal to 1):
 
     if (btnState) {
       // Code here will execute only if btnState is true (1)
     }
 
-The issue is that as we saw in the previous example, because we set the button pin mode as `INPUT_PULLUP`, the `btnState` variable is true (1) when the button is released and false (0) when the button is pressed. To change this behavior, we will modify the line where we assign the result of the `digitalRead()` function to the `btnState` variable by adding the _logical NOT_ operator `!` in front of the call to `digitalRead()` function.
+As we saw in the previous example, because we set the button pin mode as `INPUT_PULLUP`, the `btnState` variable is true (1) when the button is released and false (0) when the button is pressed. To change this behavior, we will modify the line where we assign the result of the `digitalRead()` function to the `btnState` variable by adding the _logical NOT_ operator `!` in front of the call to `digitalRead()` function.
 
 `bool btnState = !digitalRead(btnPin);`
 
@@ -117,9 +119,9 @@ Recompile the code and upload it to the Arduino.
 
 This time, the LED should behave as expected; on when the button is pressed and off when the button is released.
 
-Code for this example: [1-2-1-led.ino](examples/_1-2-1-led/_1-2-1-led.ino)
-
 ## Toggling on and off an LED
+
+Complete code for this example: [1-2-2-led_toggle](examples/_1-2-2-led_toggle/_1-2-2-led_toggle.ino)
 
 What if we would like to change the behavior of the system so that the pressing the button toggles the LED on and off without the need to hold the button?
 
@@ -208,9 +210,8 @@ This will cause the program execution to pause for a short time after the first 
 
 Recompile the code and upload it to the Arduino. This time the behavior should be stable and robust.
 
-Code for this example: [1-2-2-led_toggle.ino](examples/_1-2-2-led_toggle/_1-2-2-led_toggle.ino)
+***
 
-<hr>
 Return to the [home page](https://github.com/DrGFreeman/E2C-Arduino-Intro)
 
 Copyright (c) 2017, Julien de la Bruère-Terreault, [drgfreeman@tuta.io](mailto:drgfreeman@tuta.io)  

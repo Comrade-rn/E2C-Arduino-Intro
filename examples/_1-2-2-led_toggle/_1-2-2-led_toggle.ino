@@ -33,7 +33,7 @@ void loop() {
 
   if (btnState && !prevBtnState) {
     toggleLED();
-    delay(50);
+    delay(200);
   }
 
   // Note the button state for the next pass
