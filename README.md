@@ -5,7 +5,7 @@ This repository presents a short introduction to Arduino programming.
 ## Contents
 
 1. [Digital inputs and outputs (IO)](DigitalIO.md)
-1. Analog inputs and outputs (IO) - To be added shortly.
+1. [Analog inputs and outputs (IO) - In Work!](AnalogIO.md)
 
 ## Required material
 
@@ -28,10 +28,12 @@ The code of the examples is available in the examples folder.
 
 This introduction to Arduino programming assumes you have already installed the Arduino IDE and successfully connected your Arduino to your computer. The links below may be useful to get started with your Arduino:
 
+* [Arduino Introduction](https://www.arduino.cc/en/Guide/Introduction)
 * [Getting Started with Arduino](https://www.arduino.cc/en/Guide/HomePage)
+* [Arduino Language Reference](https://www.arduino.cc/en/Reference/HomePage)
 * [How to Use a Breadboard](https://computers.tutsplus.com/tutorials/how-to-use-a-breadboard-and-build-a-led-circuit--mac-54746)
 
 ***
 
 Copyright (c) 2017, Julien de la Bruère-Terreault, [drgfreeman@tuta.io](mailto:drgfreeman@tuta.io)  
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
