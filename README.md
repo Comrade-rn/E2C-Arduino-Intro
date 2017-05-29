@@ -1,9 +1,10 @@
 # E2C Arduino Introduction
 
-This repository presents a short introduction to Arduino programming.
+This repository presents a short introduction to microcontrollers and Arduino programming.
 
 ## Contents
 
+1. Intro to Microcontrollers with Arduino presentation ([powerpoint (.pptx)](presentations/Intro-to-Microcontrollers-with-Arduino.pptx), [PDF](presentations/Intro-to-Microcontrollers-with-Arduino.pdf)).
 1. [Digital inputs and outputs (IO)](DigitalIO.md)
 1. [Analog inputs and outputs (IO) - In Work!](AnalogIO.md)
 
