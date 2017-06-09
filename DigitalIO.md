@@ -24,21 +24,21 @@ In the Arduino IDE, create a new sketch and start by declaring the button pin nu
 int btnPin = 2;
 ```
 
-In the `setup()` section, initialize serial communication with the computer. We will use the serial monitor to display the button status:
+In the `setup()` function, initialize serial communication with the computer. We will use the serial monitor to display the button status:
 
 ```Arduino
 Serial.begin(9600);
 ```
 
-Still in the `setup()` section, declare the button pin as an input using the `pinMode` function:
+Still in the `setup()` function, declare the button pin as an input using the `pinMode` function:
 
 ```Arduino
 pinMode(btnPin, INPUT);
 ```
 
-The code located in the `setup()` section will execute only once at start-up whereas the code in the `loop()` section will execute over and over.
+The code located in the `setup()` function will execute only once at start-up whereas the code in the `loop()` function will execute over and over.
 
-In the `loop()` section, declare a boolean (`bool`) type variable to store the button state and assign the return value of the `digitalRead()` function to the variable:
+In the `loop()` function, declare a boolean (`bool`) type variable to store the button state and assign the return value of the `digitalRead()` function to the variable:
 
 ```Arduino
 bool btnState = digitalRead(btnPin);
@@ -64,7 +64,7 @@ Complete code for this example: [1-1-2-read_pushbutton_input_pullup](examples/_1
 
 To remedy this undefined pin state, the microcontroller offers the option of connecting the digital pin to 5V (high) via an internal resistor. This is called a _pull-up_ resistor because it "pulls" the pin state to a high state.
 
-To set the pull-up resistor on pin 2, modify the line in the `setup()` section to specify pin mode using the constant `INPUT_PULLUP` instead of `INPUT`:
+To set the pull-up resistor on pin 2, modify the line in the `setup()` function to specify pin mode using the constant `INPUT_PULLUP` instead of `INPUT`:
 
 ```Arduino
 pinMode(btnPin, INPUT_PULLUP);
@@ -90,13 +90,13 @@ In the Arduino IDE, below the button pin declaration, declare the led pin number
 int ledPin = 3;
 ```
 
-In the `setup()` section, set the LED pin mode to `OUTPUT` using the `pinMode()` function:
+In the `setup()` function, set the LED pin mode to `OUTPUT` using the `pinMode()` function:
 
 ```Arduino
 pinMode(ledPin, OUTPUT);
 ```
 
-Now we want to turn the LED on when the button is pressed. To do so, add, in the `loop()` section, an `if` statement that will execute the code within the curly braces {} only if the button state is true (equal to 1):
+Now we want to turn the LED on when the button is pressed. To do so, add, in the `loop()` function, an `if` statement that will execute the code within the curly braces {} only if the button state is true (equal to 1):
 
 ```Arduino
 if (btnState) {
@@ -195,9 +195,9 @@ void toggleLED() {
 }
 ```
 
-This function now should do the work. Now back to the `loop()` section.
+This function now should do the work. Now back to the `loop()` function.
 
-As we are changing the behavior significantly, keep only the first line where we read the button state and assign it to the `btnState` variable. The `loop()` section should look like this:
+As we are changing the behavior significantly, keep only the first line where we read the button state and assign it to the `btnState` variable. The `loop()` function should look like this:
 
 ```Arduino
 void loop() {
@@ -211,7 +211,7 @@ We will again use an `if` statement to take action when the button is pressed. H
 bool prevBtnState = 0;
 ```
 
-At the end of the `loop()` section, assign the `btnState` value to the `prevBtnState` variable for use in the next pass of the loop:
+At the end of the `loop()` function, assign the `btnState` value to the `prevBtnState` variable for use in the next pass of the loop:
 
 ```Arduino
 void loop() {
@@ -221,7 +221,7 @@ void loop() {
 }
 ```
 
-Now time to add the `if` statement to the loop (in between the two existing lines in the `loop` section). Here we want to execute the `if` statement block only when the button is pressed _and_ was not previously pressed. This means the are two conditions to be met simultaneously to enter the `if` statement block. This is done by using the _logical AND_ operator `&&` between the two conditions to be verified. To do so, add the following conditional statement:
+Now time to add the `if` statement to the loop (in between the two existing lines in the `loop` function). Here we want to execute the `if` statement block only when the button is pressed _and_ was not previously pressed. This means the are two conditions to be met simultaneously to enter the `if` statement block. This is done by using the _logical AND_ operator `&&` between the two conditions to be verified. To do so, add the following conditional statement:
 
 ```Arduino
 if (btnState && !prevBtnState) {
@@ -256,7 +256,8 @@ Recompile the code and upload it to the Arduino. This time the behavior should b
 
 ## Useful resources
 
-Arduino Foundation: [Digital Pins](https://www.arduino.cc/en/Tutorial/DigitalPins)
+* Arduino Foundation: [Digital Pins](https://www.arduino.cc/en/Tutorial/DigitalPins)
+* [Arduino Language Reference](https://www.arduino.cc/en/Reference/HomePage)
 
 ***
 
