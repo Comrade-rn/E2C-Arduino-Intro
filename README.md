@@ -1,6 +1,8 @@
 # E2C Arduino Introduction
 
-This repository presents a short introduction to microcontrollers and Arduino programming.
+A short introduction to microcontrollers and Arduino programming.
+
+[![Build Status](https://travis-ci.org/DrGFreeman/E2C-Arduino-Intro.svg?branch=master)](https://travis-ci.org/DrGFreeman/E2C-Arduino-Intro)
 
 ## Contents
 
@@ -19,7 +21,7 @@ The material required for this introduction is the following:
 1. a 10k ohm potentiometer.
 
 
-\*Note that the images used show an Arduino Micro however, all examples are compatible with the Arduino Uno using the same pin numbers unless otherwise specified.
+\*Note that the images used in the examples show an Arduino Micro however, all examples are compatible with the Arduino Uno using the same pin numbers unless otherwise specified.
 
 ## Example code
 
