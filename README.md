@@ -8,7 +8,7 @@ A short introduction to microcontrollers and Arduino programming.
 
 1. Intro to Microcontrollers with Arduino presentation ([powerpoint (.pptx)](presentations/Intro-to-Microcontrollers-with-Arduino.pptx), [PDF](presentations/Intro-to-Microcontrollers-with-Arduino.pdf)).
 1. [Digital inputs and outputs (IO)](DigitalIO.md)
-1. [Analog inputs and outputs (IO) - In Work!](AnalogIO.md)
+1. [Analog inputs and outputs (IO)](AnalogIO.md)
 
 ## Required material
 
@@ -40,5 +40,5 @@ This introduction to Arduino programming assumes you have already installed the 
 ***
 
 Copyright (c) 2017, Julien de la Bruère-Terreault, [drgfreeman@tuta.io](mailto:drgfreeman@tuta.io)  
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.  
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
